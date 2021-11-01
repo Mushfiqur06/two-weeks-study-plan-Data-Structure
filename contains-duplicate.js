@@ -3,6 +3,9 @@
  * @return {boolean}
  */
 let containsDuplicate = function (nums) {
+  if (nums.length < 1) {
+    return false;
+  }
   let result = nums.filter((value, index, arr) => arr.indexOf(value) !== index);
   if (result.length) {
     return true;
